@@ -8,7 +8,7 @@ This site acts as both our portfolio and a digital brand identity.
 We are two passionate developers building innovative, responsive, and performance-driven web applications.  
 **Team Members:**
 - 🚀 Vaibhav Deepak Mane — [GitHub](https://github.com/vaibhav2005-ssjoce)
-- 🚀 [Friend's Name] — [GitHub](https://github.com/friends-username)
+- 🚀 [krishana pandey] — [GitHub](https://github.com/Krish-0613)
 
 Together, we create solutions in full-stack development, cloud deployment, and user-focused design.
 
