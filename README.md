@@ -31,6 +31,6 @@ Together, we create solutions in full-stack development, cloud deployment, and u
 
 ## 🌍 Live Site
 
-👉 [https://yourusername.github.io/bad-boys](https://yourusername.github.io/bad-boys)
+👉 [https://yourusername.github.io/bad-boys](https://vaibhav2005-ssjoce.github.io/bad-boys)
 
 > 📢 Replace this with your actual live link after deployment
