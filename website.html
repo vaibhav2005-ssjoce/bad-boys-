@@ -1,0 +1,588 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bad Boys | Crafting Digital Experiences Beyond Ordinary</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;500;700;900&family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --primary: #6e0eff;
+            --secondary: #ff00e6;
+            --accent: #00f7ff;
+        }
+        
+        body {
+            font-family: 'Poppins', sans-serif;
+            background-color: #0a0a0a;
+            color: white;
+            scroll-behavior: smooth;
+        }
+        
+        .heading-font {
+            font-family: 'Orbitron', sans-serif;
+        }
+        
+        .gradient-text {
+            background: linear-gradient(90deg, var(--primary), var(--secondary), var(--accent));
+            -webkit-background-clip: text;
+            background-clip: text;
+            color: transparent;
+        }
+        
+        .gradient-border {
+            position: relative;
+        }
+        
+        .gradient-border::after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 100%;
+            height: 3px;
+            background: linear-gradient(90deg, var(--primary), var(--secondary), var(--accent));
+        }
+        
+        .tech-icon {
+            transition: transform 0.3s;
+        }
+        
+        .tech-icon:hover {
+            transform: translateY(-5px) scale(1.1);
+        }
+        
+        .project-card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 20px 30px rgba(110, 14, 255, 0.2);
+        }
+        
+        .parallax {
+            background-attachment: fixed;
+            background-position: center;
+            background-repeat: no-repeat;
+            background-size: cover;
+        }
+        
+        #map {
+            height: 400px;
+            width: 100%;
+            border-radius: 10px;
+        }
+    </style>
+</head>
+<body class="overflow-x-hidden">
+    <!-- Navigation -->
+    <nav class="fixed w-full z-50 bg-black bg-opacity-90 backdrop-blur-md px-6 py-4">
+        <div class="max-w-7xl mx-auto flex justify-between items-center">
+            <a href="#" class="text-2xl font-bold gradient-text heading-font">BAD BOYS</a>
+            <div class="hidden md:flex space-x-8 items-center">
+                <a href="#about" class="hover:text-purple-400 transition">Founders</a>
+                <a href="#skills" class="hover:text-purple-400 transition">Skills</a>
+                <a href="#projects" class="hover:text-purple-400 transition">Projects</a>
+                <a href="#contact" class="px-6 py-2 bg-gradient-to-r from-purple-600 to-pink-500 rounded-full font-medium hover:opacity-90 transition">Hire Us</a>
+            </div>
+            <button class="md:hidden text-white">
+                <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16" />
+                </svg>
+            </button>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="min-h-screen flex items-center justify-center text-center px-4 pt-20 pb-10">
+        <div class="max-w-4xl mx-auto">
+            <h1 class="text-5xl md:text-7xl font-bold mb-6 heading-font">
+                <span class="gradient-text">BAD BOYS</span>
+            </h1>
+            <h2 class="text-xl md:text-2xl mb-12 text-gray-300">Crafting Digital Experiences Beyond Ordinary</h2>
+            <div class="flex flex-wrap justify-center gap-4">
+                <a href="#projects" class="px-8 py-3 bg-gradient-to-r from-purple-600 to-pink-500 rounded-full font-medium hover:opacity-90 transition">View Our Work</a>
+                <a href="#contact" class="px-8 py-3 border-2 border-purple-500 text-purple-400 rounded-full font-medium hover:bg-purple-900 hover:bg-opacity-30 transition">Hire Us</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Founders Section -->
+    <section id="about" class="py-20 px-6">
+        <div class="max-w-7xl mx-auto">
+            <h2 class="text-4xl font-bold mb-16 text-center heading-font gradient-text">THE FOUNDERS</h2>
+            
+            <div class="grid md:grid-cols-2 gap-12">
+                <!-- Vaibhav Mane -->
+                <div class="bg-gray-900 rounded-xl p-8 transform transition hover:scale-105">
+                    <div class="flex flex-col md:flex-row items-center mb-6">
+                        <img src="https://storage.googleapis.com/workspace-0f70711f-8b4e-4d94-86f1-2a93ccde5887/image/f5204100-ff7a-4d94-b839-f628bed77e95.png" alt="Portrait of Vaibhav Mane, co-founder with short dark hair, wearing glasses with a professional yet approachable expression" class="w-32 h-32 rounded-full border-4 border-purple-500 mb-4 md:mb-0 md:mr-6">
+                        <div>
+                            <h3 class="text-2xl font-bold gradient-text">Vaibhav Mane</h3>
+                            <p class="text-gray-400">Co-Founder & Lead Developer</p>
+                        </div>
+                    </div>
+                    <p class="text-gray-300 mb-6">Full-stack developer , Passionate about creating intuitive user experiences and optimizing performance.</p>
+                    <div class="flex space-x-4">
+                        <a href="https://www.linkedin.com/in/vaibhav-mane-606721307/" class="bg-gray-800 hover:bg-gray-700 px-4 py-2 rounded flex items-center">
+                            <img src="https://cdn-icons-png.flaticon.com/512/174/174857.png" alt="LinkedIn logo icon" class="w-5 h-5 mr-2">
+                            LinkedIn
+                        </a>
+                        <a href="https://github.com/vaibhav2005-ssjoce" class="bg-gray-800 hover:bg-gray-700 px-4 py-2 rounded flex items-center">
+                            <img src="https://cdn-icons-png.flaticon.com/512/25/25231.png" alt="GitHub logo icon" class="w-5 h-5 mr-2">
+                            GitHub
+                        </a>
+                        <a href="resume/vaibhav new resume.pdf" class="bg-purple-600 hover:bg-purple-700 px-4 py-2 rounded flex items-center">
+                            <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 mr-2" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 16v1a3 3 0 003 3h10a3 3 0 003-3v-1m-4-4l-4 4m0 0l-4-4m4 4V4" />
+                            </svg>
+                            Resume
+                        </a>
+                    </div>
+                </div>
+                
+                <!-- Co-founder -->
+                <div class="bg-gray-900 rounded-xl p-8 transform transition hover:scale-105">
+                    <div class="flex flex-col md:flex-row items-center mb-6">
+                        <img src="https://storage.googleapis.com/workspace-0f70711f-8b4e-4d94-86f1-2a93ccde5887/image/354486e7-e804-4f84-8a24-b48b87d1d379.png" alt="Portrait of co-founder with a confident expression, short hair, and professional attire in an urban environment" class="w-32 h-32 rounded-full border-4 border-blue-500 mb-4 md:mb-0 md:mr-6">
+                        <div>
+                            <h3 class="text-2xl font-bold gradient-text">Krishna Pandey</h3>
+                            <p class="text-gray-400">Co-Founder & Designer </p>
+                        </div>
+                    </div>
+                    <p class="text-gray-300 mb-6">Frontend specialist with expertise in distributed systems and  infrastructure. Focused on secure, and scalable solutions for enterprise clients.</p>
+                    <div class="flex space-x-4">
+                        <a href="https://www.linkedin.com/in/krishna-pandey13/"class="bg-gray-800 hover:bg-gray-700 px-4 py-2 rounded flex items-center">
+                            <img src="https://cdn-icons-png.flaticon.com/512/174/174857.png" alt="LinkedIn logo icon" class="w-5 h-5 mr-2">
+                            LinkedIn
+                        </a>
+                        <a href="https://github.com/Krish-0613" class="bg-gray-800 hover:bg-gray-700 px-4 py-2 rounded flex items-center">
+                            <img src="https://cdn-icons-png.flaticon.com/512/25/25231.png" alt="GitHub logo icon" class="w-5 h-5 mr-2">
+                            GitHub
+                        </a>
+                        <a href="resume/Krishna pandey resume .pdf" class="bg-blue-600 hover:bg-blue-700 px-4 py-2 rounded flex items-center">
+                            <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 mr-2" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 16v1a3 3 0 003 3h10a3 3 0 003-3v-1m-4-4l-4 4m0 0l-4-4m4 4V4" />
+                            </svg>
+                            Resume
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Skills Section -->
+    <section id="skills" class="py-20 px-6 bg-gradient-to-b from-gray-900 to-black">
+        <div class="max-w-7xl mx-auto">
+            <h2 class="text-4xl font-bold mb-16 text-center heading-font gradient-text">OUR SKILLS</h2>
+            
+            <div class="grid md:grid-cols-2 gap-12">
+                <!-- Vaibhav's Skills -->
+                <div>
+                    <h3 class="text-2xl font-bold mb-6 text-center gradient-text heading-font">Vaibhav Mane</h3>
+                    <div class="space-y-6">
+                        <div>
+                            <div class="flex justify-between mb-2">
+                                <span>JavaScript/TypeScript</span>
+                                <span>95%</span>
+                            </div>
+                            <div class="w-full bg-gray-800 rounded-full h-2.5">
+                                <div class="bg-gradient-to-r from-purple-600 to-pink-500 h-2.5 rounded-full" style="width: 95%"></div>
+                            </div>
+                        </div>
+                        <div>
+                            <div class="flex justify-between mb-2">
+                                <span>React</span>
+                                <span>90%</span>
+                            </div>
+                            <div class="w-full bg-gray-800 rounded-full h-2.5">
+                                <div class="bg-gradient-to-r from-purple-600 to-pink-500 h-2.5 rounded-full" style="width: 90%"></div>
+                            </div>
+                        </div>
+                        <div>
+                            <div class="flex justify-between mb-2">
+                                <span>Node.js</span>
+                                <span>68%</span>
+                            </div>
+                            <div class="w-full bg-gray-800 rounded-full h-2.5">
+                                <div class="bg-gradient-to-r from-purple-600 to-pink-500 h-2.5 rounded-full" style="width: 85%"></div>
+                            </div>
+                        </div>
+                        <div>
+                            <div class="flex justify-between mb-2">
+                                <span>UI/UX Design</span>
+                                <span>80%</span>
+                            </div>
+                            <div class="w-full bg-gray-800 rounded-full h-2.5">
+                                <div class="bg-gradient-to-r from-purple-600 to-pink-500 h-2.5 rounded-full" style="width: 80%"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Krishna Pandey's Skills -->
+                <div>
+                    <h3 class="text-2xl font-bold mb-6 text-center gradient-text heading-font">Krishna Pandey</h3>
+                    <div class="space-y-6">
+                        <div>
+                            <div class="flex justify-between mb-2">
+                                <span>HTML/CSS</span>
+                                <span>80%</span>
+                            </div>
+                            <div class="w-full bg-gray-800 rounded-full h-2.5">
+                                <div class="bg-gradient-to-r from-blue-600 to-cyan-500 h-2.5 rounded-full" style="width: 80%"></div>
+                            </div>
+                        </div>
+                        <div>
+                            <div class="flex justify-between mb-2">
+                                <span>JavaScript</span>
+                                <span>75%</span>
+                            </div>
+                            <div class="w-full bg-gray-800 rounded-full h-2.5">
+                                <div class="bg-gradient-to-r from-blue-600 to-cyan-500 h-2.5 rounded-full" style="width: 75%"></div>
+                            </div>
+                        </div>
+                        <div>
+                            <div class="flex justify-between mb-2">
+                                <span>React</span>
+                                <span>70%</span>
+                            </div>
+                            <div class="w-full bg-gray-800 rounded-full h-2.5">
+                                <div class="bg-gradient-to-r from-blue-600 to-cyan-500 h-2.5 rounded-full" style="width: 70%"></div>
+                            </div>
+                        </div>
+                        <div>
+                            <div class="flex justify-between mb-2">
+                                <span>UI/UX</span>
+                                <span>65%</span>
+                            </div>
+                            <div class="w-full bg-gray-800 rounded-full h-2.5">
+                                <div class="bg-gradient-to-r from-blue-600 to-cyan-500 h-2.5 rounded-full" style="width: 65%"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Tech Stack -->
+            <div class="mt-20">
+                <h3 class="text-2xl font-bold mb-8 text-center gradient-text heading-font">OUR TECH STACK</h3>
+                <div class="flex flex-wrap justify-center gap-8">
+                    <img src="https://cdn-icons-png.flaticon.com/512/174/174854.png" alt="HTML5 logo" class="tech-icon h-16 w-16">
+                    <img src="https://cdn-icons-png.flaticon.com/512/732/732190.png" alt="CSS3 logo" class="tech-icon h-16 w-16">
+                    <img src="https://cdn-icons-png.flaticon.com/512/5968/5968292.png" alt="JavaScript logo" class="tech-icon h-16 w-16">
+                    <img src="https://cdn-icons-png.flaticon.com/512/1126/1126012.png" alt="React logo" class="tech-icon h-16 w-16">
+                    <img src="https://cdn-icons-png.flaticon.com/512/6132/6132221.png" alt="Node.js logo" class="tech-icon h-16 w-16">
+                    <img src="https://cdn-icons-png.flaticon.com/512/6132/6132222.png" alt="Java logo" class="tech-icon h-16 w-16">
+                    <img src="https://cdn-icons-png.flaticon.com/512/281/281760.png" alt="Python logo" class="tech-icon h-16 w-16">
+                    <img src="https://cdn-icons-png.flaticon.com/512/5968/5968342.png" alt="MongoDB logo" class="tech-icon h-16 w-16">
+                 </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Projects Section -->
+    <section id="projects" class="py-20 px-6">
+        <div class="max-w-7xl mx-auto">
+            <h2 class="text-4xl font-bold mb-12 text-center heading-font gradient-text">OUR PROJECTS</h2>
+            
+            <!-- Project Filters -->
+            <div class="flex flex-wrap justify-center gap-4 mb-12">
+                <button class="px-6 py-2 bg-purple-600 rounded-full font-medium hover:opacity-90 transition active">All Projects</button>
+                <button class="px-6 py-2 bg-gray-800 rounded-full font-medium hover:bg-gray-700 transition">Vaibhav's Projects</button>
+                <button class="px-6 py-2 bg-gray-800 rounded-full font-medium hover:bg-gray-700 transition">John's Projects</button>
+                <button class="px-6 py-2 bg-gray-800 rounded-full font-medium hover:bg-gray-700 transition">Team Projects</button>
+            </div>
+            
+            <!-- Projects Grid -->
+            <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <!-- Project 1 -->
+                <div class="bg-gray-900 rounded-xl p-6 project-card transition duration-500">
+                    <img src="https://storage.googleapis.com/workspace-0f70711f-8b4e-4d94-86f1-2a93ccde5887/image/4a848268-3101-4f79-b920-5e8fb9b79e22.png" alt="Dashboard interface of a modern analytics platform with colorful graphs and key performance indicators displayed" class="w-full rounded-lg mb-4">
+                    <h3 class="text-xl font-bold mb-2">DataInsight Pro</h3>
+                    <p class="text-gray-400 mb-4">Advanced business intelligence platform with real-time analytics</p>
+                    <div class="flex flex-wrap gap-2 mb-4">
+                        <span class="px-3 py-1 bg-gray-800 rounded-full text-sm">React</span>
+                        <span class="px-3 py-1 bg-gray-800 rounded-full text-sm">Node.js</span>
+                        <span class="px-3 py-1 bg-gray-800 rounded-full text-sm">MongoDB</span>
+                    </div>
+                    <div class="flex justify-between">
+                        <a href="#" class="text-purple-400 hover:text-purple-300 flex items-center">
+                            <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 mr-1" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14" />
+                            </svg>
+                            Live Demo
+                        </a>
+                        <a href="#" class="text-gray-400 hover:text-gray-300 flex items-center">
+                            <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 mr-1" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 17v-2m3 2v-4m3 4v-6m2 10H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z" />
+                            </svg>
+                            Details
+                        </a>
+                    </div>
+                </div>
+                
+                <!-- Project 2 -->
+                <div class="bg-gray-900 rounded-xl p-6 project-card transition duration-500">
+                    <img src="https://storage.googleapis.com/workspace-0f70711f-8b4e-4d94-86f1-2a93ccde5887/image/ea712b68-a74e-4fe5-8ed1-88e3a6865919.png" alt="Mobile app interface showing a fitness tracking application with workout statistics and progress graphs" class="w-full rounded-lg mb-4">
+                    <h3 class="text-xl font-bold mb-2">FitTrack AI</h3>
+                    <p class="text-gray-400 mb-4">AI-powered fitness application with personalized training plans</p>
+                    <div class="flex flex-wrap gap-2 mb-4">
+                        <span class="px-3 py-1 bg-gray-800 rounded-full text-sm">Flutter</span>
+                        <span class="px-3 py-1 bg-gray-800 rounded-full text-sm">Firebase</span>
+                        <span class="px-3 py-1 bg-gray-800 rounded-full text-sm">TensorFlow</span>
+                    </div>
+                    <div class="flex justify-between">
+                        <a href="#" class="text-purple-400 hover:text-purple-300 flex items-center">
+                            <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 mr-1" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14" />
+                            </svg>
+                            Live Demo
+                        </a>
+                        <a href="#" class="text-gray-400 hover:text-gray-300 flex items-center">
+                            <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 mr-1" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 17v-2m3 2v-4m3 4v-6m2 10H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z" />
+                            </svg>
+                            Details
+                        </a>
+                    </div>
+                </div>
+                
+                <!-- Project 3 -->
+                <div class="bg-gray-900 rounded-xl p-6 project-card transition duration-500">
+                    <img src="https://storage.googleapis.com/workspace-0f70711f-8b4e-4d94-86f1-2a93ccde5887/image/6dda9e4a-ac68-42c1-911a-daf92b350f44.png" alt="E-commerce platform interface with product listings, shopping cart, and special offers displayed" class="w-full rounded-lg mb-4">
+                    <h3 class="text-xl font-bold mb-2">ShopSphere</h3>
+                    <p class="text-gray-400 mb-4">Next-gen e-commerce platform with AR product preview</p>
+                    <div class="flex flex-wrap gap-2 mb-4">
+                        <span class="px-3 py-1 bg-gray-800 rounded-full text-sm">Next.js</span>
+                        <span class="px-3 py-1 bg-gray-800 rounded-full text-sm">Stripe</span>
+                        <span class="px-3 py-1 bg-gray-800 rounded-full text-sm">Three.js</span>
+                    </div>
+                    <div class="flex justify-between">
+                        <a href="#" class="text-purple-400 hover:text-purple-300 flex items-center">
+                            <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 mr-1" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14" />
+                            </svg>
+                            Live Demo
+                        </a>
+                        <a href="#" class="text-gray-400 hover:text-gray-300 flex items-center">
+                            <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 mr-1" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 17v-2m3 2v-4m3 4v-6m2 10H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z" />
+                            </svg>
+                            Details
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+  
+    <!-- Download Center -->
+    <section class="py-20 px-6">
+        <div class="max-w-7xl mx-auto">
+            <h2 class="text-4xl font-bold mb-16 text-center heading-font gradient-text">DOWNLOAD CENTER</h2>
+            
+            <div class="grid md:grid-cols-2 gap-8">
+                <!-- Vaibhav's Resume -->
+                <div class="bg-gray-900 rounded-xl p-8">
+                    <div class="flex items-center mb-6">
+                        <div class="mr-6">
+                            <img src="https://storage.googleapis.com/workspace-0f70711f-8b4e-4d94-86f1-2a93ccde5887/image/a2327d78-a998-4c6b-bd99-f3f5c5f15988.png" alt="Document icon representing Vaibhav Mane's professional resume" class="w-16 h-16">
+                        </div>
+                        <div>
+                            <h3 class="text-xl font-bold mb-1">Vaibhav Mane - Resume</h3>
+                            <p class="text-gray-400">PDF Document • 350 KB</p>
+                        </div>
+                    </div>
+                    <p class="text-gray-300 mb-6">Comprehensive resume detailing Vaibhav's education, work experience, skills, and achievements in software development.</p>
+                    <a href="resume/vaibhav new resume.pdf" class="inline-flex items-center px-6 py-3 bg-purple-600 rounded-full font-medium hover:opacity-90 transition">
+                        <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 mr-2" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 16v1a3 3 0 003 3h10a3 3 0 003-3v-1m-4-4l-4 4m0 0l-4-4m4 4V4" />
+                        </svg>
+                        Download Resume
+                    </a>
+                </div>
+                
+                <!-- Krishna's Resume -->
+                <div class="bg-gray-900 rounded-xl p-8">
+                    <div class="flex items-center mb-6">
+                        <div class="mr-6">
+                            <img src="https://storage.googleapis.com/workspace-0f70711f-8b4e-4d94-86f1-2a93ccde5887/image/a9a8418f-766e-43d2-ae3e-986bd252198a.png" alt="Document icon representing John Doe's professional resume" class="w-16 h-16">
+                        </div>
+                        <div>
+                            <h3 class="text-xl font-bold mb-1">Krishna Pandey - Resume</h3>
+                            <p class="text-gray-400">PDF Document • 420 KB</p>
+                        </div>
+                    </div>
+                    <p class="text-gray-300 mb-6">Detailed resume outlining John's technical expertise, project history, and contributions to systems architecture.</p>
+                    <a href="resume/Krishna pandey resume .pdf" class="inline-flex items-center px-6 py-3 bg-blue-600 rounded-full font-medium hover:opacity-90 transition">
+                        <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 mr-2" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 16v1a3 3 0 003 3h10a3 3 0 003-3v-1m-4-4l-4 4m0 0l-4-4m4 4V4" />
+                        </svg>
+                        Download Resume
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="py-20 px-6 bg-gradient-to-b from-gray-900 to-black">
+        <div class="max-w-7xl mx-auto">
+            <h2 class="text-4xl font-bold mb-16 text-center heading-font gradient-text">GET IN TOUCH</h2>
+            
+            <div class="grid md:grid-cols-2 gap-12">
+                <!-- Contact Form -->
+                <div class="bg-gray-900 rounded-xl p-8">
+                    <form>
+                        <div class="mb-6">
+                            <label for="name" class="block text-gray-300 mb-2">Your Name</label>
+                            <input type="text" id="name" class="w-full bg-gray-800 border border-gray-700 rounded-lg px-4 py-3 focus:border-purple-500 focus:outline-none">
+                        </div>
+                        <div class="mb-6">
+                            <label for="email" class="block text-gray-300 mb-2">Email Address</label>
+                            <input type="email" id="email" class="w-full bg-gray-800 border border-gray-700 rounded-lg px-4 py-3 focus:border-purple-500 focus:outline-none">
+                        </div>
+                        <div class="mb-6">
+                            <label for="recipient" class="block text-gray-300 mb-2">Who is this for?</label>
+                            <select id="recipient" class="w-full bg-gray-800 border border-gray-700 rounded-lg px-4 py-3 focus:border-purple-500 focus:outline-none">
+                                <option value="">Select a founder</option>
+                                <option value="vaibhav">Vaibhav Mane</option>
+                                <option value="john">Krishna Pandey/option>
+                                <option value="both">Both Founders</option>
+                            </select>
+                        </div>
+                        <div class="mb-6">
+                            <label for="message" class="block text-gray-300 mb-2">Your Message</label>
+                            <textarea id="message" rows="5" class="w-full bg-gray-800 border border-gray-700 rounded-lg px-4 py-3 focus:border-purple-500 focus:outline-none"></textarea>
+                        </div>
+                        <button type="submit" class="w-full px-6 py-3 bg-gradient-to-r from-purple-600 to-pink-500 rounded-full font-medium hover:opacity-90 transition">Send Message</button>
+                    </form>
+                </div>
+                
+                <!-- Contact Info -->
+                <div>
+                    <h3 class="text-2xl font-bold mb-6 gradient-text heading-font">Contact Information</h3>
+                    <p class="text-gray-300 mb-8">Have a project in mind or want to discuss potential collaboration opportunities? ,Or help We'd love to hear from you!</p>
+                    
+                    <div class="space-y-6">
+                        <div class="flex items-start">
+                            <div class="mr-4 mt-1">
+                                <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 text-purple-400" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" />
+                                </svg>
+                            </div>
+                            <div>
+                                <h4 class="text-lg font-bold mb-1">Email Us</h4>
+                                <p class="text-gray-400">vmane9357@gmail.com</p>
+                            </div>
+                        </div>
+                        
+                        <div class="flex items-start">
+                            <div class="mr-4 mt-1">
+                                <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 text-blue-400" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z" />
+                                </svg>
+                            </div>
+                            <div>
+                                <h4 class="text-lg font-bold mb-1">Call Us</h4>
+                                <p class="text-gray-400">9920430435</p>
+                            </div>
+                        </div>
+                        
+                        <div class="flex items-start">
+                            <div class="mr-4 mt-1">
+                                <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 text-green-400" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z" />
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 11a3 3 0 11-6 0 3 3 0 016 0z" />
+                                </svg>
+                            </div>
+                            <div>
+                                <h4 class="text-lg font-bold mb-1">Visit Us</h4>
+                                <p class="text-gray-400">27- a sai niwas, mumbai-2 ,india </p>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="mt-12">
+                        <h4 class="text-lg font-bold mb-4 gradient-text heading-font">Follow Us</h4>
+                        <div class="flex space-x-4">
+                            <a href="#" class="w-10 h-10 bg-gray-800 rounded-full flex items-center justify-center hover:bg-purple-600 transition">
+                                <img src="https://cdn-icons-png.flaticon.com/512/733/733547.png" alt="Twitter logo icon" class="w-5 h-5">
+                            </a>
+                            <a href="#" class="w-10 h-10 bg-gray-800 rounded-full flex items-center justify-center hover:bg-blue-600 transition">
+                                <img src="https://cdn-icons-png.flaticon.com/512/174/174857.png" alt="LinkedIn logo icon" class="w-5 h-5">
+                            </a>
+                            <a href="#" class="w-10 h-10 bg-gray-800 rounded-full flex items-center justify-center hover:bg-pink-500 transition">
+                                <img src="https://cdn-icons-png.flaticon.com/512/2111/2111463.png" alt="Instagram logo icon" class="w-5 h-5">
+                            </a>
+                            <a href="#" class="w-10 h-10 bg-gray-800 rounded-full flex items-center justify-center hover:bg-gray-700 transition">
+                                <img src="https://cdn-icons-png.flaticon.com/512/25/25231.png" alt="GitHub logo icon" class="w-5 h-5">
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-black py-12 px-6">
+        <div class="max-w-7xl mx-auto">
+            <div class="flex flex-col md:flex-row justify-between items-center">
+                <div class="mb-6 md:mb-0">
+                    <a href="#" class="text-2xl font-bold gradient-text heading-font">BAD BOYS</a>
+                    <p class="text-gray-500 mt-2">© 2025 Bad Boys Tech. All rights reserved.</p>
+                </div>
+                <div class="flex space-x-6">
+                    <a href="#" class="text-gray-500 hover:text-gray-300 transition">Privacy Policy</a>
+                    <a href="#" class="text-gray-500 hover:text-gray-300 transition">Terms of Service</a>
+                    <a href="#" class="text-gray-500 hover:text-gray-300 transition">Careers</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // Smooth scrolling for anchor links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                
+                const targetId = this.getAttribute('href');
+                if(targetId === '#') return;
+                
+                const targetElement = document.querySelector(targetId);
+                if(targetElement) {
+                    targetElement.scrollIntoView({
+                        behavior: 'smooth'
+                    });
+                }
+            });
+        });
+        
+        // Project filter functionality
+        document.addEventListener('DOMContentLoaded', function() {
+            const filterButtons = document.querySelectorAll('#projects button');
+            
+            filterButtons.forEach(button => {
+                button.addEventListener('click', function() {
+                    // Remove active class from all buttons
+                    filterButtons.forEach(btn => {
+                        btn.classList.remove('bg-purple-600');
+                        btn.classList.add('bg-gray-800');
+                    });
+                    
+                    // Add active class to clicked button
+                    this.classList.remove('bg-gray-800');
+                    this.classList.add('bg-purple-600');
+                    
+                    // Here you would implement the actual filtering logic
+                    // This is a placeholder for demonstration
+                    console.log('Filtering projects by:', this.textContent.trim());
+                });
+            });
+        });
+    </script>
+</body>
+</html>
